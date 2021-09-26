@@ -19,6 +19,7 @@ const router = express.Router()
     ,getplandetailscontroller = projectModels['getplandetails']
     ,getpaymethodcontroller = projectModels['getpaymethod']
     ,getpurchasecontroller = projectModels['purchaseoperation']
+    ,getCalculatedCoinDetailscontroller = projectModels['getCalculatedCoinDetails']
     
     
     
@@ -29,6 +30,7 @@ router.post('/login',logincontroller.login)
 router.get('/getCoinsDetails',getcoinsdetaislcontroller.getcoindeial)
 router.post('/resetoperation',resetoperationcontroller.resetoperation)
 router.get('/getplandetails',getplandetailscontroller.getplandetails)
+router.get('/getcalulcatedcoindetails',getCalculatedCoinDetailscontroller.getCalculatedCoinDetails)
 
 
 router.use(adauth.login)
@@ -36,6 +38,7 @@ router.post('/planoperation',planoperationcontroller.planoperation)
 router.post('/getnetworkdata',networkcontroller.getnetworkdata)
 router.post('/getpaymethod',getpaymethodcontroller.getpaymethod)
 router.post('/purchaseoperation',getpurchasecontroller.purchaseoperation)
+
 
 console.log('Server Started')
 module.exports = router
